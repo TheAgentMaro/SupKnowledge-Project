@@ -5,7 +5,7 @@ function ArticleDisplay({ articles }) {
   if (!articles || articles.length === 0) {
     return (
       <div className="article-display">
-        <p>No articles to display.</p>
+        <p>No articles found.</p>
       </div>
     );
   }

@@ -4,14 +4,14 @@ import Home from './Home';
 import AdvancedSearch from './components/AdvancedSearch/AdvancedSearch';
 import ObjectDetail from './components/ObjectDetail/ObjectDetail';
 
-Routes = () => {
+const AppRoutes = () => {
   return (
     <Routes>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/search" component={AdvancedSearch} />
-      <Route exact path="/object/:objectId" component={ObjectDetail} />
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/search" element={<AdvancedSearch />} />
+      <Route exact path="/object/:objectId" element={<ObjectDetail />} />
     </Routes>
   );
 };
 
-export default Routes;
+export default AppRoutes;

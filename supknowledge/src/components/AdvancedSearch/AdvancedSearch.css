@@ -1,37 +1,69 @@
 .advanced-search {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.advanced-search label {
+.advanced-search h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
   display: block;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
-.advanced-search select,
-.advanced-search input {
-  margin-right: 10px;
-  margin-bottom: 10px;
+.form-field input,
+.form-field select {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
   font-size: 16px;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
+  width: 100%;
 }
 
-.advanced-search button {
-  margin-top: 10px;
+.form-field input:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.5);
+}
+
+button[type="submit"] {
+  background-color: #0077ff;
+  color: #fff;
   border: none;
-  background-color: #4CAF50;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 5px;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.advanced-search button:hover {
-  background-color: #3e8e41;
+button[type="submit"]:hover {
+  background-color: #005ae6;
+}
+
+@media (min-width: 768px) {
+  .advanced-search {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-field {
+    flex-basis: calc(50% - 10px);
+    margin-right: 20px;
+  }
+
+  .form-field:nth-child(2n) {
+    margin-right: 0;
+  }
 }

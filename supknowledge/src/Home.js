@@ -1,39 +1,70 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { getHighlights } from './services/api';
+import { useEffect, useState } from 'react';
+import { getHighlights, getRandomObjectID } from './services/api';
+import ObjectDetail from './components/ObjectDetail/ObjectDetail';
 import './Home.css';
 
-const Home = () => {
-  const [highlights, setHighlights] = useState([]);
+function Home() {
+  const [highlightIDs, setHighlightIDs] = useState([]);
+  const [randomObjectID, setRandomObjectID] = useState(null);
+  const [selectedObject, setSelectedObject] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await getHighlights();
-      setHighlights(response.data);
+      try {
+        const highlights = await getHighlights();
+        const randomID = await getRandomObjectID();
+        setHighlightIDs(highlights);
+        setRandomObjectID(randomID);
+      } catch (error) {
+        console.error(error);
+      }
     }
     fetchData();
   }, []);
 
+  const handleObjectSelect = async (objectID) => {
+    try {
+      const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`);
+      const data = await response.json();
+      setSelectedObject(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-    <div className="home">
-      <h1 className="home-title">Metropolitan Museum of Art</h1>
-      <h2 className="home-subtitle">Highlights</h2>
-      <div className="highlights">
-        {highlights.map((highlight) => (
-          <div key={highlight.id} className="highlight">
-            <Link to={`/object/${highlight.id}`}>
-              <img src={highlight.primaryImageSmall} alt={highlight.title} />
-              <div className="highlight-caption">
-                <h3 className="highlight-title">{highlight.title}</h3>
-                <p className="highlight-department">{highlight.department}</p>
-                <p className="highlight-period">{highlight.period}</p>
-              </div>
-            </Link>
-          </div>
+    <div className="home-container">
+    <h1 className="home-title">
+      <span className="animated-text">
+        Welcome to SupKnowledge !
+      </span>
+    </h1>
+    <p className="home-description">
+      <span className="animated-text">
+        Explore our collection of art and artifacts from around the world.
+      </span>
+    </p>
+    <h2 className="home-highlights-title">
+      <span className="animated-text">
+        Check the Highlights :
+      </span>
+    </h2>
+      <ul className="home-highlights-list">
+        {highlightIDs.map((id) => (
+          <li key={id}>
+            <button className="home-highlight-button" onClick={() => handleObjectSelect(id)}>Article {id}</button>
+          </li>
         ))}
-      </div>
+      </ul>
+      {randomObjectID && (
+        <p className="home-random-object">
+          Feeling lucky?{' '}
+          <button className="home-random-button" onClick={() => handleObjectSelect(randomObjectID)}>Click here to see a random painting.</button>
+        </p>
+      )}
+      {selectedObject && <ObjectDetail object={selectedObject} />}
     </div>
   );
-};
+}
 
 export default Home;

@@ -1,52 +1,72 @@
-.highlight-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.highlight-card {
-  border: 1px solid #ccc;
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-description {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.home-highlights-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.home-highlights-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-highlight-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  width: 300px;
-}
-
-.highlight-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.highlight-title {
-  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
 }
 
-.highlight-department {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+.home-random-object {
+  margin-top: 40px;
+  font-size: 1.2rem;
 }
 
-.highlight-period {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+.home-random-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
-.highlight-author {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 0.5rem;
+.animated-text {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
-.highlight-description {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+.animated-text span {
+  animation: typing 2s steps(20) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
