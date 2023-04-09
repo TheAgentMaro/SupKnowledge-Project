@@ -1,0 +1,154 @@
+.App {
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.article-container {
+  width: 60%;
+}
+
+.object-detail-container {
+  width: 35%;
+}
+
+.advanced-search-container {
+  width: 35%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+  
+  .article-container {
+    width: 100%;
+  }
+
+  .object-detail-container {
+    width: 100%;
+  }
+
+  .advanced-search-container {
+    width: 100%;
+  }
+}
+
+.search-bar {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input-container label {
+  margin-right: 1rem;
+}
+
+.input-container input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+.input-container button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  background-color: #0069d9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-results li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  text-decoration: underline;
+}
+
+.object-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.object-detail img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.object-detail p {
+  margin: 0;
+  padding: 0;
+}
+
+.object-detail .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.object-detail .metadata {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.object-detail .description {
+  margin-bottom: 1rem;
+}
+
+.advanced-search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.advanced-search-form label {
+  margin-bottom: 0.5rem;
+}
+
+.advanced-search-form select,
+.advanced-search-form input[type="date"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.advanced-search-form button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  background-color: #0069d9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

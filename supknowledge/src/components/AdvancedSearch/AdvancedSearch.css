@@ -1,0 +1,37 @@
+.advanced-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.advanced-search label {
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.advanced-search select,
+.advanced-search input {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.advanced-search button {
+  margin-top: 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.advanced-search button:hover {
+  background-color: #3e8e41;
+}
