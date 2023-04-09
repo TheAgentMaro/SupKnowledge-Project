@@ -137,3 +137,42 @@
     border-color: orange;
   }
 }
+
+
+
+/* For screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .home-container {
+    padding: 0 1rem;
+  }
+
+  .home-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-highlights-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-highlight-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .home-random-object {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .home-random-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
