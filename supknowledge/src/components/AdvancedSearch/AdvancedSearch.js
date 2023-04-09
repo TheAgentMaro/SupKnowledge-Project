@@ -28,12 +28,13 @@ function AdvancedSearch(props) {
       <form onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="search-query"> Search query: </label>{" "}
-          <input
-            id="search-query"
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />{" "}
+        <input
+        id="search-query"
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        ref={advancedSearchRef}
+        />{" "}
         </div>{" "}
         <div className="form-field">
           <label htmlFor="department"> Department: </label>{" "}
