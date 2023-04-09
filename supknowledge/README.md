@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# SupKnowledge 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SupKnowledge est un site web d'art et d'artefacts du monde entier, où les utilisateurs peuvent explorer une collection d'articles.
 
-## Available Scripts
+## Comment lancer l'application
 
-In the project directory, you can run:
+Pour lancer l'application, suivez les étapes suivantes :
 
-### `npm start`
+Ouvrez un terminal dans le dossier du projet.
+Tapez npm install pour installer les dépendances.
+Tapez npm start pour lancer l'application.
+L'application devrait s'ouvrir dans votre navigateur par défaut à l'adresse 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+http://localhost:3000/.
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Comment utiliser l'application
+Barre de recherche Vous pouvez utiliser la barre de recherche en haut de la page pour rechercher un article en entrant un terme de recherche. Les résultats de la recherche s'afficheront sur la page de résultats de recherche.
 
-### `npm test`
+Recherche avancée Vous pouvez également utiliser la recherche avancée en cliquant sur le bouton "Recherche avancée". Cela vous permettra de spécifier des critères de recherche supplémentaires tels que la catégorie, la date, etc.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Points forts La page d'accueil affiche une liste de points forts. Vous pouvez cliquer sur l'un des articles mis en évidence pour accéder à la page de détails de l'article.
 
-### `npm run build`
+Page de détails La page de détails affiche les informations détaillées sur un article, y compris son nom, sa catégorie, sa date, etc.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Comment contribuer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Si vous souhaitez contribuer au développement de cette application, veuillez suivre les étapes suivantes : Ouvrez une nouvelle branche pour travailler sur votre fonctionnalité. Créez une demande de tirage pour demander que votre fonctionnalité soit fusionnée dans la branche principale. Assurez-vous que toutes les vérifications et tests ont été effectués avant de fusionner votre branche.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Please make sure to update tests as appropriate.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Auteur
+Mohamed Marwen Meddeb
+## License
+Licence Ce projet est sous licence MIT. Veuillez consulter le fichier LICENCE pour plus d'informations.
+[MIT](https://choosealicense.com/licenses/mit/)
