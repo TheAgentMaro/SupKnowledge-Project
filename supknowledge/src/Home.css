@@ -176,3 +176,39 @@
     padding: 0.5rem 1rem;
   }
 }
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+  .home-title {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .home-description {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+  .home-highlights-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+/* Media queries for even smaller screens */
+@media screen and (max-width: 480px) {
+  .home-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .home-description {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .home-highlights-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}

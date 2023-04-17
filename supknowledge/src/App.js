@@ -3,7 +3,6 @@ import SearchBar from './components/SearchBar/SearchBar';
 import AdvancedSearch from './components/AdvancedSearch/AdvancedSearch';
 import SearchResults from './components/SearchResults';
 import ObjectDetail from './components/ObjectDetail/ObjectDetail';
-import SearchResult from './components/SearchResults';
 import Home from './Home';
 import { searchObjects, getObjectDetails } from './services/api';
 import './App.css';

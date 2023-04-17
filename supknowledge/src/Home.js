@@ -59,6 +59,8 @@ function Home() {
       {randomObjectID && (
         <p className="home-random-object">
           Feeling lucky?{' '}
+          <br />
+          <br />
           <button className="home-random-button" onClick={() => handleObjectSelect(randomObjectID)}>Click here to see a random painting.</button>
         </p>
       )}
