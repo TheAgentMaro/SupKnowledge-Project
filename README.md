@@ -15,6 +15,8 @@ L'application devrait s'ouvrir dans votre navigateur par défaut à l'adresse
 http://localhost:3000/.
 ```
 
+-- Si vous avez rencontré un problème avec CORS, vous pouvez télécharger l'extension "Moesif Origin & CORS changer" sur votre navigateur ! .
+
 ## Comment utiliser l'application
 Barre de recherche Vous pouvez utiliser la barre de recherche en haut de la page pour rechercher un article en entrant un terme de recherche. Les résultats de la recherche s'afficheront sur la page de résultats de recherche.
 
