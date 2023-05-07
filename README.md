@@ -2,6 +2,8 @@
 
 SupKnowledge est un site web d'art et d'artefacts du monde entier, où les utilisateurs peuvent explorer une collection d'articles.
 
+Veuillez noter que notre site est une application à page unique (SPA). Cela signifie que toutes les interactions avec le site se font sur une seule et même page, ce qui permet une expérience utilisateur fluide et rapide.
+
 ## Comment lancer l'application
 
 Pour lancer l'application, suivez les étapes suivantes :
