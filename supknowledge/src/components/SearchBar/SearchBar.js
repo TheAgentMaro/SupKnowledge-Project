@@ -18,6 +18,12 @@ function SearchBar({ onSearch }) {
     const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${query}`);
     const data = await response.json();
     onSearch(query);
+
+      // faire défiler automatiquement vers le champ de recherche
+      const searchResults = document.getElementById("search-results");
+      if (searchResults) {
+        searchResults.scrollIntoView({ behavior: "smooth" });
+      }
   };
 
   return (

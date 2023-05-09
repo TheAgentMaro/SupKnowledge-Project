@@ -36,6 +36,9 @@ Please make sure to update tests as appropriate.
 
 ## Auteur
 Mohamed Marwen Meddeb
+Donia Laajili
+
+
 ## License
 Licence Ce projet est sous licence MIT. Veuillez consulter le fichier LICENCE pour plus d'informations.
 [MIT](https://choosealicense.com/licenses/mit/)

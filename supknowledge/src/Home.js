@@ -7,6 +7,7 @@ function Home() {
   const [highlightIDs, setHighlightIDs] = useState([]);
   const [randomObjectID, setRandomObjectID] = useState(null);
   const [selectedObject, setSelectedObject] = useState(null);
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -20,6 +21,12 @@ function Home() {
       }
     }
     fetchData();
+
+    // Add a scroll event listener to show/hide the scroll-to-top button
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const handleObjectSelect = async (objectID) => {
@@ -32,23 +39,32 @@ function Home() {
     }
   };
 
+  const handleScroll = () => {
+    // Show the scroll-to-top button when the user scrolls down
+    setShowScrollButton(window.pageYOffset > 300);
+  };
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="home-container">
-    <h1 className="home-title">
-      <span className="animated-text">
-        Welcome to SupKnowledge !
-      </span>
-    </h1>
-    <p className="home-description">
-      <span className="animated-text">
-        Explore our collection of art and artifacts from around the world.
-      </span>
-    </p>
-    <h2 className="home-highlights-title">
-      <span className="animated-text">
-        Check the Highlights :
-      </span>
-    </h2>
+      <h1 className="home-title">
+        <span className="animated-text">
+          Welcome to SupKnowledge !
+        </span>
+      </h1>
+      <p className="home-description">
+        <span className="animated-text">
+          Explore our collection of art and artifacts from around the world.
+        </span>
+      </p>
+      <h2 className="home-highlights-title">
+        <span className="animated-text">
+          Check the Highlights :
+        </span>
+      </h2>
       <ul className="home-highlights-list">
         {highlightIDs.map((id) => (
           <li key={id}>
@@ -65,6 +81,11 @@ function Home() {
         </p>
       )}
       {selectedObject && <ObjectDetail object={selectedObject} />}
+      {showScrollButton && (
+        <button className="scroll-to-top-button" onClick={handleScrollToTop}>
+          <i className="fas fa-chevron-up"></i>
+        </button>
+      )}
     </div>
   );
 }
